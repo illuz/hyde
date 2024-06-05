@@ -1,0 +1,10 @@
+{{if eq .Section .Site.Params.postDir}}
+<em>
+    <time datetime={{ .Date.Format "2006-01-02T15:04:05Z0700" }} class="post-date">
+        <b>创建时间：</b>{{ .Date.Format .Site.Params.dateTimeFormat }}
+    </time>
+</em>
+{{ partial "tags.html" . }}
+{{/*  <b>原文：</b><a href="{{.Permalink}}">{{.Permalink}}</a>  */}}
+<hr>
+{{end}}
